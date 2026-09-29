@@ -34,25 +34,10 @@ The project follows a hybrid detection approach:
 5. The signature-based results and machine-learning predictions are combined.
 6. The hybrid IDS performance is evaluated using accuracy, detection rate, false positive rate, F1 score, and ROC-AUC.
    
-## Results
-
-The evaluated Hybrid IDS achieved:
-
-- Accuracy: **93.33%**
-- Detection Rate (TPR): **95.33%**
-- False Positive Rate (FPR): **8.67%**
-- F1 Score: **0.935**
-- ROC-AUC: **0.990**
-
-The Random Forest model achieved:
-
-- Training Accuracy: **100.00%**
-- Testing Accuracy: **94.00%**
-
 ## My Contribution
 
 * Worked on the implementation of the hybrid intrusion detection approach.
-* Worked with data preprocessing and feature handling.
+* Worked with simulated network-traffic data and feature handling.
 * Contributed to integrating signature-based detection with machine-learning-based classification.
 * Worked on evaluating and analyzing the system results.
 
@@ -73,6 +58,34 @@ Simulated Network Dataset
           ↓
      Performance Evaluation
 ```
+## Results
+
+### Hybrid IDS Performance
+
+| Metric | Result |
+|---|---:|
+| Accuracy | 93.33% |
+| Detection Rate (TPR) | 95.33% |
+| False Positive Rate (FPR) | 8.67% |
+| F1 Score | 0.935 |
+| ROC-AUC | 0.990 |
+
+### Random Forest Performance
+
+| Metric | Result |
+|---|---:|
+| Training Accuracy | 100.00% |
+| Testing Accuracy | 94.00% |
+
+### Result Visualizations
+
+#### ROC Curve
+
+![ROC Curve](Results_roc_curve.png)
+
+#### Detection Method Comparison
+
+![Detection Method Comparison](Results_comparison_chart.png)
 
 ## Conclusion
 
