@@ -4,9 +4,7 @@
 
 The Hybrid Signature-Based Intrusion Detection System is a network security project designed to detect malicious network activity by combining traditional signature-based detection with machine-learning-based detection.
 
-The system uses predefined signatures to identify known attack patterns and network traffic that is not detected by the signature rules is further evaluated using a Random Forest machine learning model.. This hybrid approach helps combine rule-based detection with data-driven classification.
-
-The final hybrid decision combines the outputs of both detection approaches.
+The system first applies predefined signature rules and then uses a Random Forest machine learning model to classify the test data. The final hybrid decision combines the outputs of both approaches.
 
 ## Objectives
 
@@ -29,15 +27,27 @@ The final hybrid decision combines the outputs of both detection approaches.
 
 The project follows a hybrid detection approach:
 
-1. Network traffic data is collected and prepared for analysis.
-2. The data is preprocessed and relevant features are handled.
-3. Signature-based rules are used to identify known attack patterns.
-4. A Random Forest classifier is used for machine-learning-based classification.
-5. The detection results are evaluated using performance metrics.
-
+1. A simulated network intrusion dataset is generated with normal and attack samples.
+2. Signature-based rules are applied to identify known attack patterns.
+3. The dataset is divided into training and testing sets.
+4. A Random Forest classifier is trained using MATLAB's TreeBagger function.
+5. The signature-based results and machine-learning predictions are combined.
+6. The hybrid IDS performance is evaluated using accuracy, detection rate, false positive rate, F1 score, and ROC-AUC.
+   
 ## Results
 
-The implemented system achieved **93.33% accuracy** on the evaluated dataset.
+The evaluated Hybrid IDS achieved:
+
+- Accuracy: **93.33%**
+- Detection Rate (TPR): **95.33%**
+- False Positive Rate (FPR): **8.67%**
+- F1 Score: **0.935**
+- ROC-AUC: **0.990**
+
+The Random Forest model achieved:
+
+- Training Accuracy: **100.00%**
+- Testing Accuracy: **94.00%**
 
 ## My Contribution
 
@@ -46,7 +56,7 @@ The implemented system achieved **93.33% accuracy** on the evaluated dataset.
 * Contributed to integrating signature-based detection with machine-learning-based classification.
 * Worked on evaluating and analyzing the system results.
 
-## Project Structure
+## Project Workflow
 
 ```text
 Simulated Network Dataset
@@ -66,5 +76,5 @@ Simulated Network Dataset
 
 ## Conclusion
 
-This project demonstrates the application of both traditional signature-based techniques and machine learning for network intrusion detection. It provided practical experience in Python, data processing, machine learning, and cybersecurity concepts.
+This project demonstrates the application of both traditional signature-based techniques and machine learning for network intrusion detection. It provided practical experience in MATLAB, machine learning, classification, performance evaluation and cybersecurity concepts.
 
