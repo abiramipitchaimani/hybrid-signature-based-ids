@@ -4,7 +4,9 @@
 
 The Hybrid Signature-Based Intrusion Detection System is a network security project designed to detect malicious network activity by combining traditional signature-based detection with machine-learning-based detection.
 
-The system uses predefined signatures to identify known attack patterns and a Random Forest machine learning model to classify network traffic based on extracted features. This hybrid approach helps combine rule-based detection with data-driven classification.
+The system uses predefined signatures to identify known attack patterns and network traffic that is not detected by the signature rules is further evaluated using a Random Forest machine learning model.. This hybrid approach helps combine rule-based detection with data-driven classification.
+
+The final hybrid decision combines the outputs of both detection approaches.
 
 ## Objectives
 
@@ -15,12 +17,13 @@ The system uses predefined signatures to identify known attack patterns and a Ra
 
 ## Technologies Used
 
-* Python
-* Machine Learning
-* Random Forest
-* Signature-Based Detection
-* Network Intrusion Detection
-* Data Preprocessing
+- MATLAB
+- Random Forest
+- TreeBagger
+- Signature-Based Detection
+- Machine Learning
+- Network Intrusion Detection
+- ROC Curve and AUC Analysis
 
 ## System Approach
 
@@ -34,7 +37,7 @@ The project follows a hybrid detection approach:
 
 ## Results
 
-The implemented system achieved **93.17% accuracy** on the evaluated dataset.
+The implemented system achieved **93.33% accuracy** on the evaluated dataset.
 
 ## My Contribution
 
@@ -46,13 +49,19 @@ The implemented system achieved **93.17% accuracy** on the evaluated dataset.
 ## Project Structure
 
 ```text
-hybrid-signature-based-ids/
-│
-├── README.md
-├── src/
-├── dataset/
-├── results/
-└── documentation/
+Simulated Network Dataset
+          ↓
+   Signature-Based Rules
+          ↓
+    Known Attack Detection
+          ↓
+    Random Forest Model
+          ↓
+      ML Probability
+          ↓
+   Hybrid Decision Logic
+          ↓
+     Performance Evaluation
 ```
 
 ## Conclusion
